@@ -1,0 +1,6 @@
+poetry
+uagents
+sklearn
+ToastNotifier
+numpy
+requests
