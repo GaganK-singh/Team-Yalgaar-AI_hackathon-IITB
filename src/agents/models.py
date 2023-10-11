@@ -1,13 +1,14 @@
-from uagents import Agent, Bureau
+from uagents import Agent, Bureau, Context
 import requests
 from sklearn.linear_model import LinearRegression
 import numpy as np
 
-agent1 = Agent(name="name1", seed="name1 recovery phrase")
-agent2 = Agent(name="name2", seed="name2 recovery phrase")
+
+agent1 = Agent(name="agent1", seed="name1 recovery phrase")
 
 @agent1.on_interval(period=3.0)
-async def get_real_time_weather(api_key, location):
+async def get_real_time_weather(ctx: Context):
+
     base_url = "http://api.weatherstack.com/current"
     params = {
         "access_key": api_key,
@@ -20,16 +21,19 @@ async def get_real_time_weather(api_key, location):
         data = response.json()
         temperature_celsius = data["current"]["temperature"]
         weather_description = data["current"]["weather_descriptions"][0]
+        msg = f''
+        await ctx.send(agent2.address, Message(text=msg))
         return temperature_celsius, weather_description
     else:
         print("Failed to fetch weather data.")
         return None
 
 if __name__ == "__main__":
+
     api_key = "YOUR_APIKEY"  #Define your apikey in .env file
     location = input(str(""))  
-
-    weather_data = get_real_time_weather(api_key, location)
+    agent1.run()
+    weather_data = get_real_time_weather()
 
     if weather_data is not None:
         temperature, description = weather_data
@@ -50,8 +54,3 @@ if __name__ == "__main__":
         else:
             print("not working")
 
-
-@agent2.on_interval(period=3.0)
-def run_temperature_alert_agent(api_key, location):
-    agent = TemperatureAlertAgent(api_key, location)
-    agent.run()
