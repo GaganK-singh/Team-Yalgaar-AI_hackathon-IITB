@@ -7,7 +7,7 @@ Project Description:-
 
 The project aims to create a temperature controller with the following main features using Fetch.ai's uAgent library:
 
-a) ** Fabric actual temperature page **: Agent that connects to the free weather API to get the temperature. Temperature data for a specific location. This allows users to receive up-to-date weather information.
+a) **Fabric actual temperature page**: Agent that connects to the free weather API to get the temperature. Temperature data for a specific location. This allows users to receive up-to-date weather information.
 
 b) **User Preferences**: Users can adjust their temperature by setting the temperature (minimum and maximum) and displaying the location temperature. interest. This change allows users to receive warm alerts tailored to their specific needs and preferences.
 
@@ -20,4 +20,6 @@ Instructions to run the project:-
 2) Create a Python environment using "poetry" python package
 3) Clone the repository to your local device
 4) Run "./src/agents/models.py"
+
+
 
