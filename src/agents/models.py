@@ -1,7 +1,8 @@
-from uagents import Agent, Bureau, Context
+from uagents import Agent,Context
 import requests
 from sklearn.linear_model import LinearRegression
 import numpy as np
+import ToastNotifier
 
 
 agent1 = Agent(name="agent1", seed="name1 recovery phrase")
