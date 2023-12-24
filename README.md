@@ -5,7 +5,7 @@
 
 ▪️ Project Description:-
 
- **Documentation: Temperature Alert Agent**
+**Documentation: Temperature Alert Agent**
 
 ---
 
@@ -15,7 +15,7 @@ The Temperature Alert Agent is a Python project built using Fetch.ai's uAgents l
 
 ### Project Structure
 
-```
+```plaintext
 project_directory/
 ├── poetry.lock
 ├── pyproject.toml
@@ -40,7 +40,7 @@ project_directory/
 
    Create a `.env` file in the project directory with the following content:
 
-   ```
+   ```plaintext
    OPENWEATHERMAP_API_KEY=your_openweathermap_api_key
    LOCATION=YourCity,YourCountryCode
    MIN_TEMPERATURE=20.0
@@ -106,7 +106,7 @@ project_directory/
 
 3. Create a `.env` file with your OpenWeatherMap API key and desired location:
 
-   ```
+   ```plaintext
    OPENWEATHERMAP_API_KEY=your_openweathermap_api_key
    LOCATION=YourCity,YourCountryCode
    MIN_TEMPERATURE=20.0
