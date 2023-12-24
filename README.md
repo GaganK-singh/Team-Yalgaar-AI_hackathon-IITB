@@ -13,21 +13,22 @@
 
 The Temperature Alert Agent is a Python project built using Fetch.ai's uAgents library. It connects to a free weather API to fetch real-time temperatures for a specified location and sends alerts to users when the current temperature goes below the minimum or above the maximum threshold they've set.
 
-### File Structure
+### Project Structure
 
-
-project_directory
+```
+project_directory/
 ├── poetry.lock
 ├── pyproject.toml
 ├── README.md
-└── src
-    ├── agents
+└── src/
+    ├── agents/
     │   ├── __init__.py
     │   └── temperature_alert_agent.py
-    ├── uagents_temperature
+    ├── uagents_temperature/
     │   ├── __init__.py
     │   └── temperature_functions.py
     └── main.py
+```
 
 - **agents**: Contains the main Temperature Alert Agent implementation.
 - **uagents_temperature**: Houses utility functions related to temperature fetching.
@@ -39,12 +40,12 @@ project_directory
 
    Create a `.env` file in the project directory with the following content:
 
-   
+   ```
    OPENWEATHERMAP_API_KEY=your_openweathermap_api_key
    LOCATION=YourCity,YourCountryCode
    MIN_TEMPERATURE=20.0
    MAX_TEMPERATURE=30.0
-   
+   ```
 
    Replace `your_openweathermap_api_key` with your actual OpenWeatherMap API key.
 
@@ -58,15 +59,15 @@ project_directory
 
 1. **Install Dependencies:**
 
-   
+   ```bash
    poetry install
-   
+   ```
 
 2. **Run Temperature Alert Agent:**
 
-   
+   ```bash
    poetry run python src/agents/temperature_alert_agent.py
-   
+   ```
 
 ### Usage
 
@@ -92,31 +93,31 @@ project_directory
 
 1. Clone the project repository:
 
-   
+   ```bash
    git clone <repository_url>
    cd <project_directory>
-   
+   ```
 
 2. Create a virtual environment:
 
-   
+   ```bash
    poetry install
-   
+   ```
 
 3. Create a `.env` file with your OpenWeatherMap API key and desired location:
 
-   
+   ```
    OPENWEATHERMAP_API_KEY=your_openweathermap_api_key
    LOCATION=YourCity,YourCountryCode
    MIN_TEMPERATURE=20.0
    MAX_TEMPERATURE=30.0
-   
+   ```
 
 4. Run the Temperature Alert Agent:
 
-   
+   ```bash
    poetry run python src/agents/temperature_alert_agent.py
-   
+   ```
 
    The agent will start fetching real-time temperatures and sending alerts based on the configured thresholds.
 
